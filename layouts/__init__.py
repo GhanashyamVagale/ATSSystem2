@@ -29,7 +29,7 @@ safety_settings = [
 ]
 
 def get_gemini_response(prompt,pdf_content):
-    model=genai.GenerativeModel('gemini-pro-vision',safety_settings=safety_settings)
+    model=genai.GenerativeModel('gemini-1.5-flash',safety_settings=safety_settings)
     response=model.generate_content([prompt,pdf_content[0]])
     return response.text
 
